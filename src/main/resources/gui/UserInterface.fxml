@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchrPnMain" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="447.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.UserInterfaceController">
+   <children>
+      <BorderPane prefHeight="250.0" prefWidth="447.0">
+         <right>
+            <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="170.0" prefWidth="127.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="lblBestenliste" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Bestenliste" textAlignment="CENTER">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <ScrollPane fx:id="scrollPane" prefHeight="176.0" prefWidth="112.0">
+                     <content>
+                        <AnchorPane prefHeight="143.0" prefWidth="100.0">
+                           <children>
+                              <VBox fx:id="VBxPunkte" layoutX="61.0" prefHeight="59.0" prefWidth="39.0">
+                                 <children>
+                                    <Label fx:id="lblPunkteTtl" prefHeight="13.0" prefWidth="50.0" text="Punkte">
+                                       <font>
+                                          <Font size="10.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox fx:id="VBxName" layoutX="19.0" prefHeight="78.0" prefWidth="36.0">
+                                 <children>
+                                    <Label fx:id="lblNameTtl" prefHeight="13.0" prefWidth="46.0" text="Name">
+                                       <font>
+                                          <Font size="10.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </ScrollPane>
+               </children>
+               <BorderPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="20.0" />
+               </BorderPane.margin>
+            </VBox>
+         </right>
+         <center>
+            <VBox fx:id="vbxAktuelleZahl" alignment="CENTER" prefHeight="200.0" prefWidth="494.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="lblBereichZahl" alignment="CENTER" text="Aktuelle Zahl" />
+                  <Label fx:id="lblZahlenBereich" text="im Bereich von" />
+                  <Label fx:id="lblAktuelleZahl" alignment="CENTER" prefHeight="91.0" prefWidth="91.0" text="Zahl">
+                     <font>
+                        <Font size="51.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER" prefHeight="51.0" prefWidth="292.0">
+                     <children>
+                        <Button fx:id="btnNiedriger" mnemonicParsing="false" onAction="#handleOnLowerButtonClick" text="Niedriger">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="btnHoeher" mnemonicParsing="false" onAction="#handleOnHigherButtonClick" text="Höher">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <Button fx:id="btnBeenden" mnemonicParsing="false" onAction="#handleOnEndButtonClick" text="Spiel beenden" />
+               </children>
+            </VBox>
+         </center>
+         <left>
+            <StackPane fx:id="stckPaneLeft" prefHeight="223.0" prefWidth="133.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox fx:id="vbxNameWahl" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" visible="false">
+                     <children>
+                        <Label fx:id="lblName" text="Name:">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </Label>
+                        <TextField fx:id="txtFldName" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="26.0" prefWidth="97.0" text="Kim">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <StackPane fx:id="stckPnBtns" pickOnBounds="false" prefHeight="37.0" prefWidth="133.0">
+                           <children>
+                              <Button fx:id="btnSpielStarten" mnemonicParsing="false" onAction="#handleOnStartGameButtonClick" text="Spiel starten" />
+                           </children>
+                        </StackPane>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="vbxPunktzahl" alignment="CENTER" prefHeight="200.0" prefWidth="123.0">
+                     <children>
+                        <Label fx:id="ttlAktuellePunktzahl" alignment="CENTER" text="Aktuelle Punktzahl">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblAktuellePunktzahl" alignment="CENTER" prefHeight="32.0" prefWidth="70.0">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Button fx:id="btnPlayAgain" mnemonicParsing="false" onAction="#handleOnPlayAgainButton" text="Erneut spielen" />
+                     </children>
+                  </VBox>
+               </children>
+            </StackPane>
+         </left>
+         <top>
+            <MenuBar BorderPane.alignment="CENTER">
+              <menus>
+                <Menu mnemonicParsing="false" text="Datei">
+                  <items>
+                    <MenuItem fx:id="menuItmNeuesSpiel" mnemonicParsing="false" onAction="#handleOnNewGameButtonClick" text="Neues Spiel" />
+                        <MenuItem fx:id="menuItmHighscoreLaden" mnemonicParsing="false" onAction="#handleOnLoadHighscoreClick" text="Highscore laden" />
+                        <MenuItem fx:id="menuItmHighscoreSpeichern" mnemonicParsing="false" onAction="#handleOnSaveHighscoreButtonClick" text="Highscore speichern" />
+                        <MenuItem fx:id="menuItmSchliessen" mnemonicParsing="false" onAction="#handleOnCloseButtonClick" text="Schließen" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </top>
+         <bottom>
+            <Label fx:id="lblInfo" alignment="CENTER" prefHeight="28.0" prefWidth="417.0" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>

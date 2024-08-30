@@ -1,0 +1,58 @@
+{
+  "highScores": [
+    {
+      "name": "Claire",
+      "score": 15
+    },
+	{
+      "name": "Jessie",
+      "score": 15
+    },
+	{
+      "name": "Nils",
+      "score": 14
+    },
+	{
+      "name": "Aerith",
+      "score": 13
+    },
+	{
+      "name": "Snow",
+      "score": 12
+    },
+	{
+      "name": "Cloud",
+      "score": 12
+    },
+	{
+      "name": "Hope",
+      "score": 11
+    },
+	{
+      "name": "Fang",
+      "score": 10
+    },
+	{
+      "name": "Vanille",
+      "score": 10
+    },
+	{
+      "name": "Tifa",
+      "score": 10
+    },
+	{
+      "name": "Sazh",
+      "score": 7
+    },
+	{
+      "name": "Serah",
+      "score": 7
+    },
+    {
+      "name": "Kim",
+      "score": 1
+    }
+  ],
+  "lowerLimit": 1,
+  "upperLimit": 10
+}
